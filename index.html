@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Fascinate|Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/jQuery.js"></script>
+  <title>Blaze-Pizza</title>
+</head>
+
+<body>
+  <div class="nav">
+    <ul>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#home">Home</a></li>
+    </ul>
+  </div>
+  <div id="home">
+    <div class="container-full">
+      <h1 id="welcome">WELCOME</h1>
+      <p id="description"> Abby's Pizza Place is a local, chef-owned business.<br>
+        taste the difference on all  menus<br>recipe are homemade
+        by professsional chefs who <br>are passionate about the quality of pizza<br> and out of the world taste experience.</p>
+    </div>
+  </div>
+  <div id="about">
+    <div class="about-us">
+      <h2 id="abt">ABOUT US</h2>
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/abt.jpg" alt="my-image" class="img1">
+          </div>
+          <div class="col-md-6">
+            <p id="para">We located in Nairobi,CBD along University way.
+              We offer pizza of high quality which has white and red oak for its clean taste, All of our pizzas, wings, appetizers, and entrees
+              are cooked to perfection at a consistent cooking temperatures.<br>
+              Get affordable charges according to your location.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="menu">
+    <div class="pizza-size">
+      <h3 class="header">eye-catching designs here!.</h3>
+      <div class="row">
+        <div class="col-md-5">
+          <img src="images/large.jpg" alt="large" height="300px" width="400px">
+          <h3 class="text"> Large</h3>
+          <p class="text">KSH 1000</p>
+        </div>
+        <div class="col-md-4">
+          <img src="images/medium.jpg" alt="medium" height="300px" width="300px">
+          <h3 class="text">Medium</h3>
+          <p class="text">KSH 700</p>
+        </div>
+        <div class="col-md-3">
+          <img src="images/small.jpg" alt="small" class="smal" width="200px" height="200px">
+          <h4 class="text1">Small</h4>
+          <p class="text1">KSH 500</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div id="order">
+    <h1 id="name">ABBY'S PIZZA ORDER FORM HERE!</h1>
+    <div class="fourteen1">
+      <div class="container">
+        <p class="four1">GET YOUR ORDER</p>
+        <form id="choice">
+          <div class="form-group selection">
+            <div id="choices">
+              <div class="form-group">
+                <label for="pizzaSize">Choose the size:</label>
+                <select class="form-control" id="pizzaSize" onchange="getSizeValue();">
+                  <option value="0">&nbsp;</option>
+                  <option value="500">Small -- Ksh. 500</option>
+                  <option value="700">Medium -- Ksh. 700</option>
+                  <option value="1000">Large -- Ksh. 1000</option>
+                </select>
+                <label for="crust">Chooose the crust type:</label>
+                <select class="form-control" id="crust" onchange="getCrust();" required>
+                  <option value="0">&nbsp;</option>
+                  <option value="200">Cripsy---Ksh.200</option>
+                  <option value="100">Stuffed---Ksh.100</option>
+                  <option value="100">Glutten---Ksh100</option>
+                  <option value="100">Fried ---Ksh.100</option>
+                  <option value="150">Thin ---Ksh.150</option>
+                  <option value="200">Deep ---Ksh.200</option>
+                  <option value="150">Thick ---Ksh.150</option>
+                </select>
+                <label for="toppings"> toppings:</label><br>
+                <input type="checkbox" id="pepperoni" name="checks" value="150" onclick="getPepperoni();">Pepperoni--Ksh.&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="mushrooms" name="checks" value="100" onclick="getMushroom();">Mushrooms--Ksh.&nbsp;100<br>
+                <input type="checkbox" id="onions" name="checks" value="150" onclick="getOnions();">Onions--Ksh.&nbsp;150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="sausage" name="checks" value="100" onclick="getSausage();">Sausage--Ksh.&nbsp;&nbsp;100<br>
+                <label for="many">Enter Number of pizza?</label>
+                <select class="form-control" id="many" onchange="getNumber();" required>
+                  <option value="0">&nbsp;</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select><br>
+              </div>
+            </div>
+            <div id="location">
+              <div class="form-group">
+                <label for="location">Select the location of delivery:</label>
+                <select class="form-control" id="delivery" onchange="getLocation();">
+                  <option value="0">&nbsp;</option>
+                  <option value="100">Nairobi CBD--Ksh.100</option>
+                  <option value="200">Thika road -- Ksh.200</option>
+                  <option value="300">Athi-River--Ksh.300</option>
+                  <option value="200">Ngong road--Ksh. 300</option>
+                  <option value="100">Mombasa road--Ksh.300</option>
+                  <option value="200">Karen--Ksh.200</option>
+                  <option value="300">Kikuyu--Ksh.300</option>
+                  <option value="100">Westlands--Ksh.100</option>
+                  <option value="200">Eastleigh--Ksh.200</option>
+                </select>
+              </div>
+            </div>
+            <span class="btn btn-primary cancel" onclick="document.location.reload(true)">Cancel</span>
+            <span class="btn btn-primary text-right" id="Checkout" onclick="getTotalAmount(); clearFields();">Checkout</span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="fourteen2">
+      <div class="container">
+        <p>Your Total Bill is:</p>
+        <p id="fourteen3"></p>
+        <button class="btn btn-success" id="fourteen3button" onclick="document.location.reload(true)">Thank you for shopping with us</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="contact">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="images/image.jpg" alt="img" class="image" height="400px" width="400px">
+        <h3 class="title">Manager</h3>
+        <p class="title">O783810053</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/cust.jpg" alt="medium" class="cust" height="400px" width="350px">
+        <h3 class="title">Human Resource Office</h3>
+        <p class="title">0707972380</p>
+      </div>
+      <div class="col-md-4">
+        <img src="images/logo.jpg" alt="medium" class="open" height="200px" width="250px">
+        <h4 class="open">Opening Hours</h4>
+        <p> Monday to Friday 7AM-12PM:</p>
+        <p>Weekends 10AM -5pm</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
